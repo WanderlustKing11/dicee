@@ -24,3 +24,7 @@ else if (randomNumber2 > randomNumber1) {
 } else {
   document.querySelector("h1").innerHTML = "Draw!";
 }
+
+console.log("Welcome to Dicee Website!");
+console.log("Recently: finalized style. Dice successfully randomized. Code is made less redundant, shorter, and cleaner. Hope you enjoy.");
+console.log("Currenlty working on:   Flag icon is affected by "h1" in css. Would like to reverse this. Then start saving results from Player 1 & 2 and create a database.")
