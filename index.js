@@ -1,51 +1,26 @@
 
+var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
 
-var randomNumber1 = Math.random();
-randomNumber1 = (Math.floor(randomNumber1*6)+1);
+var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
 
-if (randomNumber1 === 6) {
-    document.querySelector(".dice1").setAttribute("src", "images/dice6.png");
-} else if (randomNumber1 === 5) {
-    document.querySelector(".dice1").setAttribute("src", "images/dice5.png");
-} else if (randomNumber1 === 4) {
-    document.querySelector(".dice1").setAttribute("src", "images/dice4.png");
-} else if (randomNumber1 === 3) {
-    document.querySelector(".dice1").setAttribute("src", "images/dice3.png");
-} else if (randomNumber1 === 2) {
-    document.querySelector(".dice1").setAttribute("src", "images/dice2.png");
-} else if (randomNumber1 === 1) {
-    document.querySelector(".dice1").setAttribute("src", "images/dice1.png");
-}
+var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
 
-var randomNumber2 = Math.random();
-randomNumber2 = (Math.floor(randomNumber2*6)+1);
+var image1 = document.querySelectorAll("img")[0];
 
-if (randomNumber2 === 6) {
-    document.querySelector(".dice2").setAttribute("src", "images/dice6.png");
-} else if (randomNumber2 === 5) {
-    document.querySelector(".dice2").setAttribute("src", "images/dice5.png");
-} else if (randomNumber2 === 4) {
-    document.querySelector(".dice2").setAttribute("src", "images/dice4.png");
-} else if (randomNumber2 === 3) {
-    document.querySelector(".dice2").setAttribute("src", "images/dice3.png");
-} else if (randomNumber2 === 2) {
-    document.querySelector(".dice2").setAttribute("src", "images/dice2.png");
-} else if (randomNumber2 === 1) {
-    document.querySelector(".dice2").setAttribute("src", "images/dice1.png");
-}
+image1.setAttribute("src", randomImageSource);
 
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
+
+document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+
+// If player 1 wins
 if (randomNumber1 > randomNumber2) {
-  document.querySelector("h1").innerHTML = "Player 1 Wins!";
-  document.querySelector(".flag1").style.display = "inline";
-} else if (randomNumber2 > randomNumber1) {
-  document.querySelector("h1").innerHTML = "Player 2 Wins!";
-  document.querySelector(".flag2").style.display = "inline";
-} else if (randomNumber1 === randomNumber2) {
-  document.querySelector("h1").innerHTML = "Draw!"
+  document.querySelector("h1").innerHTML = "🚩 Player 1 Wins!";
 }
-
-console.log("Welcome to Dicee Website!");
-console.log("Recently: created Random Number Generator for P1 & P2. Displaying the winners in P1");
-console.log("Currenlty working on:   adding a flag icon in front of the h2 elements through JS.")
-
-// <img class="dice1" src="images/dice6.png" alt="dice-6">
+else if (randomNumber2 > randomNumber1) {
+  document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+} else {
+  document.querySelector("h1").innerHTML = "Draw!";
+}
