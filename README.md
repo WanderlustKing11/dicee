@@ -1,5 +1,5 @@
 # dicee
-Simple landing page game: Player 1 vs Player 2 dice game
+Simple landing page: Player 1 vs Player 2 dice game
 
 Click refresh to see who rolls the better number!
 
